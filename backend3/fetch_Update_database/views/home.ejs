@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<style>
+    tr,table,td{
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+           <th>id</th>
+           <th>Email</th>
+           <th>Username</th>
+        </tr>
+        <%for(results of result){%>
+        <tr>
+            <td><%=results.id%></td>
+            <td><%=results.email%></td>
+            <td><%=results.username%></td>
+             <td>
+                <form action="home/<%=results.id%>/edit">
+                    <button>edit Username</button>
+                </form>
+             </td>
+        </tr>
+        <%}%>
+    </table>
+
+</body>
+</html>
